@@ -21,7 +21,7 @@ const UserProvider = ({children}) => {
 
     const login = async (data) => {
         try {
-            const response = await fetch("http://localhost:5000/login",{
+            const response = await fetch("https://blog-app-13pi.onrender.com/login",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
@@ -43,7 +43,7 @@ const UserProvider = ({children}) => {
     
     const register = async (data) => {
         try {
-            const response = await fetch("http://localhost:5000/signup",{
+            const response = await fetch("https://blog-app-13pi.onrender.com/signup",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"

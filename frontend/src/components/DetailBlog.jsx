@@ -8,7 +8,7 @@ export const DetailBlog = () => {
     navigate(-1);
   };
   const fetchBlog = async () => {
-    const response = await fetch(`http://localhost:5000/blogs/${params.id}`);
+    const response = await fetch(`https://blog-app-13pi.onrender.com/blogs/${params.id}`);
     const data = await response.json();
     setBlog(data);
   };
