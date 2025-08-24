@@ -1,26 +1,25 @@
 const express = require("express");
 const router = require("./auth-router/router");
 const cors = require("cors");
-const path = require("path")
+const path = require("path");
 require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 const db = require("./database/db");
 
 const corsOptions = {
-    origin:"https://blogapplication-1zkw.onrender.com/",
-    credentials:true
-}
+  origin: "https://blogapplication-1zkw.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+};
 
-const app = express()
-app.use(express.json())
-app.use(cors(corsOptions))
-app.use("/",router)
-app.use("/uploads", express.static(path.join(__dirname, "uploads")))
+const app = express();
+app.use(express.json());
+app.use(cors(corsOptions));
+app.use("/", router);
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-
-db().then(()=>{
-    app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
-    });
-})
-
+db().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
+});
