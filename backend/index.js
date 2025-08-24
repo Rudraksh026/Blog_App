@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 const db = require("./database/db");
 
 const corsOptions = {
-    origin:"http://localhost:5173",
+    origin:"https://blogapplication-1zkw.onrender.com/",
     credentials:true
 }
 
