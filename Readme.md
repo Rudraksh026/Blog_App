@@ -50,7 +50,7 @@ cd Blog_App
 ```bash
 cd backend && npm install
 cd client && bun install
-
+```
 
 ### 3. Run the application
 ```bash
