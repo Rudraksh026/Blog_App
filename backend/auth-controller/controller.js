@@ -58,7 +58,7 @@ const addBlog = async (req, res) => {
 
     // File URL (if uploaded)
     const coverImageUrl = req.file
-      ? `http://localhost:5000/uploads/${req.file.filename}`
+      ? `https://blog-app-13pi.onrender.com/uploads/${req.file.filename}`
       : "";
 
     // Push new blog into user's addBlog array
